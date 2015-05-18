@@ -1,0 +1,17 @@
+<?php
+function pet_menu() {
+    $items = array();
+    $items['pets'] = array(
+        'title' => "The Best Kind of Pet",
+        'page callback' => 'show_dog',
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+    return $items;
+}
+
+function show_dog() {
+    return '<p>The best kind of pet is a dog.</p>
+            <img src="http://static-ams.ebayclassifieds.com/1505040456/img/category_info//pets/dogs-puppies/golden-retriever.jpg">
+            <p>Specifically, the <a target="_blank" href="http://en.wikipedia.org/wiki/Golden_Retriever">golden retriever.</a></p>';
+}
